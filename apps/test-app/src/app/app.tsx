@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Todo } from '@nx-tutorial/data';
+import { Todos } from '@nx-tutorial/ui';
 
-export const App = () => {
+const App = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
@@ -24,11 +25,7 @@ export const App = () => {
   return (
     <>
       <h1>Todos</h1>
-      <ul>
-        {todos.map((t) => (
-          <li className={'todo'}>{t.title}</li>
-        ))}
-      </ul>
+      <Todos todos={todos} />
       <button id={`add-todo`} onClick={addTodo}>
         Add Todo
       </button>

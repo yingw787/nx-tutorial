@@ -1,16 +1,15 @@
 import React from 'react';
+import { Todo } from '@nx-tutorial/data';
 
-import './test-app.css';
 
-/* eslint-disable-next-line */
-export interface TestAppProps {}
-
-export const TestApp = (props: TestAppProps) => {
+export const Todos = (props: { todos: Todo[] }) => {
   return (
-    <div>
-      <h1>Welcome to test-app!</h1>
-    </div>
+    <ul>
+      {props.todos.map((t) => (
+        <li className={'todo'}>{t.title}</li>
+      ))}
+    </ul>
   );
 };
 
-export default TestApp;
+export default Todos;
