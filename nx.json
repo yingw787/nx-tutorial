@@ -28,6 +28,9 @@
     "test-app-e2e": {
       "tags": [],
       "implicitDependencies": ["test-app"]
+    },
+    "api": {
+      "tags": []
     }
   }
 }
